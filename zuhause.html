@@ -18,12 +18,12 @@ lang: de
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
         </h2>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">abonnieren <a href="{{ "/futter.xml" | prepend: site.baseurl }}">über RSS</a></p>
+  <p class="rss-subscribe">abonnieren <a href="{{ "/futter.xml" | prepend: site.baseurl | prepend: site.url }}">über RSS</a></p>
 
 </div>
